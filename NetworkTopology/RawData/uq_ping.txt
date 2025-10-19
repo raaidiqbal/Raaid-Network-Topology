@@ -1,0 +1,22 @@
+Pinging www.uq.edu.au [130.102.184.3] with 32 bytes of data:
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=278ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=226ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=229ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+Reply from 130.102.184.3: bytes=32 time=227ms TTL=235
+
+Ping statistics for 130.102.184.3:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 226ms, Maximum = 278ms, Average = 232ms, Median = 227ms
+
+RIPE: Google (16.683015ms), Wikipedia (25.58701ms), Facebook (25.58701ms)
+
+Date: 10/18/2025
+Time: 11:47 am
+End: Queensland, Au

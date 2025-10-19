@@ -1,0 +1,23 @@
+Pinging e13678.dscb.akamaiedge.net [23.209.62.49] with 32 bytes of data:
+Reply from 23.209.62.49: bytes=32 time=8ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=5ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=6ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=6ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=7ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=7ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=8ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=6ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=7ms TTL=57
+Reply from 23.209.62.49: bytes=32 time=6ms TTL=57
+
+Ping statistics for 23.209.62.49:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 5ms, Maximum = 8ms, Average = 6ms, Median = 6.5ms
+
+RIPE: Google (48.396553ms), Wikipedia (27.323536ms), Facebook (4.692219ms)
+
+
+Date: 10/18/2025
+Time: 11:39 am
+End: Minneapolis, Mn

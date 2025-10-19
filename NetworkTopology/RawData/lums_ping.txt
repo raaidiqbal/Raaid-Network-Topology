@@ -1,0 +1,22 @@
+Pinging lums.edu.pk [111.68.103.174] with 32 bytes of data:
+Reply from 111.68.103.174: bytes=32 time=282ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=282ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=284ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=298ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+Reply from 111.68.103.174: bytes=32 time=283ms TTL=242
+
+Ping statistics for 111.68.103.174:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 282ms, Maximum = 298ms, Average = 284ms, Median = 283ms
+
+RIPE: Google (325.974555ms), Wikipedia (98.519264ms), Facebook (31.699378ms)
+
+Date: 10/17/2025
+Time: 3:30
+End: Lahore, Pakistan

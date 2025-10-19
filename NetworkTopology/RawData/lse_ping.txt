@@ -1,0 +1,22 @@
+Pinging lb.outweb.lse.ac.uk [185.18.139.150] with 32 bytes of data:
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=101ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=101ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=100ms TTL=241
+Reply from 185.18.139.150: bytes=32 time=101ms TTL=241
+
+Ping statistics for 185.18.139.150:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 100ms, Maximum = 101ms, Average = 100ms, Median = 100ms
+
+RIPE: Google (12.189375ms), Wikipedia (11.537041ms), Facebook (22.951417ms)
+
+Date: 10/18/2025
+Time: 11:41 am
+End: London, UK

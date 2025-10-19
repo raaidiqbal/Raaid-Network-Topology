@@ -1,0 +1,20 @@
+  1     2 ms     2 ms     3 ms  10.133.0.254
+  2    40 ms     7 ms     3 ms  137.22.198.4
+  3     *        *        7 ms  e0-21.switch3.msp1.he.net [184.105.39.113]
+  4     8 ms     8 ms     8 ms  100ge0-35.core2.blp1.he.net [184.105.64.98]
+  5     *        *        *     Request timed out.
+  6     *        *       18 ms  port-channel4.core3.mci3.he.net [184.105.65.165]
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9    27 ms    27 ms    27 ms  94.142.107.242
+ 10   153 ms   153 ms   153 ms  94.142.98.191
+ 11   155 ms   153 ms   154 ms  94.142.98.158
+ 12     *        *        *     Request timed out.
+ 13   158 ms   156 ms   156 ms  187-100-57-87.dsl.telesp.net.br [187.100.57.87]
+ 14     *        *        *     Request timed out.
+ 15   153 ms   153 ms   153 ms  e724-sp2-r06-nx-swc.uspnet.usp.br [143.107.151.94]
+ 16   151 ms   152 ms   151 ms  143.107.254.130
+
+Date: 10/17/2025
+Time: 4:21 pm
+End: Sao Paulo, Brazil

@@ -1,0 +1,20 @@
+Pinging www5.usp.br [200.144.235.134] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 200.144.235.134:
+Packets: Sent = 10, Received = 0, Lost = 10 (100% loss),
+
+RIPE: Google (3.526569ms), Wikipedia (3.832555ms), Facebook (4.647549ms)
+
+Date: 10/18/2025
+Time: 12:18 pm
+End: Sao Paulo, Brazil

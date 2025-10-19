@@ -1,0 +1,14 @@
+Tracing route to www.ucsc.edu [23.185.0.4]
+over a maximum of 30 hops:
+
+  1     2 ms     2 ms     2 ms  10.133.0.254
+  2    13 ms     9 ms     7 ms  137.22.198.4
+  3     8 ms     8 ms     7 ms  telecomb-gr-01-te0-2-0-11-789.northernlights.gigapop.net [146.57.254.7]
+  4     *        *        *     Request timed out.
+  5     7 ms     6 ms     7 ms  23.185.0.4
+
+Trace complete.
+
+Date: 10/17/2025
+Time: 10:16 pm
+End: SF, Ca

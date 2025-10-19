@@ -1,5 +1,38 @@
-This is the README file for [NAME]'s CS 331, Fall 2025, project repository
+This is the README file for Raaid's CS 331, Fall 2025, project repository
 
 ## Contents of this repository
 
-[you fill this in]
+
+
+\- NetworkTopology/: Network topology analysis project
+
+
+
+**File Structure:**
+
+
+
+├── README.md
+
+├── NetworkTopology/
+
+│   ├── README.md
+
+│   ├── RawData/
+
+│   ├── Artifacts/
+
+│   ├── Slides/
+
+
+
+**Collaborators:**
+
+
+
+* Amy Csizmar Dalal
+
+
+
+
+

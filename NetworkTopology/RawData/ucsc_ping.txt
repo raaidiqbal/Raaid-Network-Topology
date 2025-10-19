@@ -1,0 +1,22 @@
+Pinging www.ucsc.edu [23.185.0.4] with 32 bytes of data:
+Reply from 23.185.0.4: bytes=32 time=6ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=7ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=6ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=14ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=8ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=12ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=6ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=6ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=6ms TTL=60
+Reply from 23.185.0.4: bytes=32 time=7ms TTL=60
+
+Ping statistics for 23.185.0.4:
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 6ms, Maximum = 14ms, Average = 7ms, Median = 6.5ms
+
+RIPE: Google (4.066987ms), Wikipedia (7.216313ms), Facebook (4.293325ms)
+
+Date: 10/18/2025
+Time: 11:35 am
+End: SF, Ca
