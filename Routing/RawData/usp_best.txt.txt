@@ -1,0 +1,9 @@
+route-views.chicago.routeviews.org> show ip bgp 143.107.254.130 bestpath
+BGP routing table entry for 143.107.254.0/24, version 986393204
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  49544 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 1900, valid, external, atomic-aggregate, best (AS Path), rpki validation-state: not found
+      Community: 12956:123 12956:4002 12956:4020 12956:4201 49544:13000 49544:13151
+      Last update: Tue Oct 21 06:33:27 2025

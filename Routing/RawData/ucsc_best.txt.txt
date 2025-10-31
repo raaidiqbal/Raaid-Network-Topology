@@ -1,0 +1,7 @@
+BGP routing table entry for 23.185.0.0/24, version 725096747
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  199524 54113
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, otc 54113, best (AS Path), rpki validation-state: valid
+      Last update: Sun Aug 10 04:00:34 2025

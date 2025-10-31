@@ -1,0 +1,40 @@
+BGP routing table entry for 143.107.254.0/24, version 986393204
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  49544 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 1900, valid, external, atomic-aggregate, best (AS Path), rpki validation-state: not found
+      Community: 12956:123 12956:4002 12956:4020 12956:4201 49544:13000 49544:13151
+      Last update: Tue Oct 21 06:33:27 2025
+  293 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.58 from 208.115.136.58 (134.55.200.167)
+      Origin IGP, metric 1, valid, external, atomic-aggregate, rpki validation-state: not found
+      Last update: Tue Oct 21 06:33:24 2025
+  199524 1299 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, atomic-aggregate, rpki validation-state: not found
+      Last update: Tue Oct 21 06:33:00 2025
+  16552 1299 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.137.69 from 208.115.137.69 (46.31.238.17)
+      Origin IGP, valid, external, atomic-aggregate, rpki validation-state: not found
+      Community: 1299:25000 16552:9100 16552:10500 16552:20840 16552:40014
+      Last update: Tue Oct 21 06:32:58 2025
+  32709 2914 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.134 from 208.115.136.134 (63.134.128.248)
+      Origin IGP, valid, external, atomic-aggregate, rpki validation-state: not found
+      Community: 2914:420 2914:1004 2914:2000 2914:3000 12956:4002 12956:4020
+      Last update: Wed Oct 22 15:32:49 2025
+  19151 2914 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.18 from 208.115.136.18 (66.216.0.41)
+      Origin IGP, metric 0, valid, external, atomic-aggregate, rpki validation-state: not found
+      Last update: Wed Oct 22 15:29:44 2025
+  19653 3356 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.133 from 208.115.136.133 (67.219.192.18)
+      Origin IGP, valid, external, atomic-aggregate, rpki validation-state: not found
+      Last update: Tue Oct 21 06:33:59 2025
+  17350 1299 12956 10429 28571, (aggregated by 65001 143.107.249.38)
+    208.115.136.95 from 208.115.136.95 (141.160.0.65)
+      Origin IGP, valid, external, atomic-aggregate, rpki validation-state: not found
+      Community: 1299:5000 17350:5000 17350:5124
+      Last update: Tue Oct 21 06:32:58 2025
+  17350 6453 12956 10429 28571, (aggregated by 65001 143.107.249.38)

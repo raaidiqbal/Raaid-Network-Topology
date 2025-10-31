@@ -1,0 +1,116 @@
+BGP routing table entry for 137.22.0.0/19, version 1081333021
+Paths: (18 available, best #1, table default)
+  Not advertised to any peer
+  6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.251 (208.115.137.251)
+      Origin IGP, metric 90, valid, external, multipath, best (AS Path), rpki validation-state: not found
+      Community: 24115:6939 24115:24115 24115:65023
+      Large Community: 24115:1000:2 24115:1001:1 24115:1002:1 24115:1003:0 24115:1004:6939
+      Last update: Mon Oct 20 05:01:08 2025
+  19653 30600 57 26557
+    208.115.136.133 from 208.115.136.133 (67.219.192.18)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:28:29 2025
+  293 11537 57 26557
+    208.115.136.58 from 208.115.136.58 (134.55.200.167)
+      Origin IGP, metric 1, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:28:50 2025
+  17350 6461 57 26557
+    208.115.136.95 from 208.115.136.95 (141.160.0.65)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6461:5000 17350:5000 17350:5125
+      Last update: Fri Sep 26 06:28:21 2025
+  17350 6461 57 26557
+    208.115.136.5 from 208.115.136.5 (141.160.0.66)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6461:5000 17350:5000 17350:5125
+      Last update: Wed Oct 22 00:02:20 2025
+  6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.252 (208.115.137.252)
+      Origin IGP, metric 90, valid, external, multipath, rpki validation-state: not found
+      Community: 24115:6939 24115:24115 24115:65023
+      Large Community: 24115:1000:2 24115:1001:1 24115:1002:2 24115:1003:1 24115:1004:6939
+      Last update: Sun Oct 12 04:04:55 2025
+  199524 6939 26557 26557 26557
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:27:29 2025
+  16552 6939 26557 26557 26557
+    208.115.137.69 from 208.115.137.69 (46.31.238.17)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 16552:9150 16552:10500 16552:20840 16552:40014
+      Last update: Fri Sep 26 06:27:01 2025
+  32709 6939 26557 26557 26557
+    208.115.136.134 from 208.115.136.134 (63.134.128.248)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:27:27 2025
+  19151 6939 26557 26557 26557
+    208.115.136.18 from 208.115.136.18 (66.216.0.41)
+      Origin IGP, metric 0, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:27:18 2025
+  852 6939 26557 26557 26557
+    208.115.136.67 from 208.115.136.67 (154.11.0.140)
+      Origin IGP, metric 0, valid, external, rpki validation-state: not found
+      Last update: Thu Oct  2 10:02:29 2025
+  49544 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 0, valid, external, rpki validation-state: not found
+      Community: 24115:6939 24115:24115 24115:65023 49544:14000 49544:14117
+      Large Community: 24115:1000:2 24115:1001:1 24115:1002:1 24115:1003:0 24115:1004:6939
+      Last update: Mon Oct 20 05:01:08 2025
+  14630 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.200 (199.230.0.152)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6939:5001 14630:4 14630:5001
+      Last update: Fri Sep 26 06:27:01 2025
+  14630 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.100 (199.230.0.153)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6939:5001 14630:4 14630:5001
+      Last update: Fri Sep 26 06:27:01 2025
+  53828 6939 26557 26557 26557
+    208.115.136.37 from 208.115.136.220 (207.200.192.81)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 53828:11 53828:1001
+      Last update: Fri Sep 26 06:27:05 2025
+  8220 6939 26557 26557 26557
+    208.115.137.35 from 208.115.137.35 (212.74.90.12)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 8220:65001 8220:65250 8220:65401
+      Last update: Thu Oct  9 17:02:27 2025
+  20253 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.216 (217.20.50.48)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:27:13 2025
+  32590 6939 26557 26557 26557
+    208.115.136.37 from 208.115.136.103 (162.254.193.250)
+      Origin EGP, valid, external, rpki validation-state: not found
+  14630 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.200 (199.230.0.152)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6939:5001 14630:4 14630:5001
+      Last update: Fri Sep 26 06:27:01 2025
+  14630 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.100 (199.230.0.153)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 6939:5001 14630:4 14630:5001
+      Last update: Fri Sep 26 06:27:01 2025
+  53828 6939 26557 26557 26557
+    208.115.136.37 from 208.115.136.220 (207.200.192.81)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 53828:11 53828:1001
+      Last update: Fri Sep 26 06:27:05 2025
+  8220 6939 26557 26557 26557
+    208.115.137.35 from 208.115.137.35 (212.74.90.12)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 8220:65001 8220:65250 8220:65401
+      Last update: Thu Oct  9 17:02:27 2025
+  20253 6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.216 (217.20.50.48)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Sep 26 06:27:13 2025
+  32590 6939 26557 26557 26557
+    208.115.136.37 from 208.115.136.103 (162.254.193.250)
+      Origin EGP, valid, external, rpki validation-state: not found
+      Community: 6939:1000 6939:7313 6939:8840 6939:9001 17152:1
+      Last update: Fri Oct 17 19:37:25 2025

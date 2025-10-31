@@ -1,0 +1,9 @@
+BGP routing table entry for 203.135.62.0/24, version 1083320436
+Paths: (18 available, best #1, table default)
+  Not advertised to any peer
+  6939 17557
+    208.115.136.37 from 208.115.137.251 (208.115.137.251)
+      Origin IGP, metric 2155, valid, external, multipath, best (AS Path), rpki validation-state: valid
+      Community: 24115:6939 24115:24115 24115:65012
+      Large Community: 24115:1000:1 24115:1001:1 24115:1002:1 24115:1003:0 24115:1004:6939
+      Last update: Sat Oct 25 18:27:41 2025

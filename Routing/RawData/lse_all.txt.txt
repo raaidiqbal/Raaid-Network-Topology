@@ -1,0 +1,80 @@
+BGP routing table entry for 185.18.139.0/24, version 366690038
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  199524 174 60885
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, best (AS Path), rpki validation-state: not found
+      Last update: Thu Aug 14 20:54:55 2025
+  32709 174 60885
+    208.115.136.134 from 208.115.136.134 (63.134.128.248)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 174:21101 174:22012
+      Last update: Fri Oct 17 11:07:42 2025
+  19151 174 60885
+    208.115.136.18 from 208.115.136.18 (66.216.0.41)
+      Origin IGP, metric 2, valid, external, rpki validation-state: not found
+      Last update: Thu Sep 25 06:38:50 2025
+  19653 3356 60885
+    208.115.136.133 from 208.115.136.133 (67.219.192.18)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Fri Oct 17 19:00:51 2025
+  293 3356 60885
+    208.115.136.58 from 208.115.136.58 (134.55.200.167)
+      Origin IGP, metric 1, valid, external, rpki validation-state: not found
+      Last update: Thu Aug 14 03:37:44 2025
+  17350 3356 60885
+    208.115.136.95 from 208.115.136.95 (141.160.0.65)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 3356:5000 17350:5000 17350:5125
+      Last update: Wed Sep 10 09:42:25 2025
+  17350 3356 60885
+    208.115.136.5 from 208.115.136.5 (141.160.0.66)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 3356:5000 17350:5000 17350:5125
+      Last update: Wed Oct 22 00:02:28 2025
+  852 174 60885
+    208.115.136.67 from 208.115.136.67 (154.11.0.140)
+      Origin IGP, metric 20445, valid, external, rpki validation-state: not found
+      Last update: Sat Oct 25 06:00:37 2025
+  49544 3356 60885
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Last update: Sat Oct 25 06:00:37 2025
+  49544 3356 60885
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 10, valid, external, rpki validation-state: not found
+      Community: 3356:2 3356:123 3356:500 3356:2064 49544:16000 49544:16117
+      Last update: Fri Sep 26 07:07:46 2025
+  14630 3356 60885
+    208.115.137.200 from 208.115.137.200 (199.230.0.152)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 3356:2 3356:22 3356:100 3356:123 3356:500 3356:903 3356:2064 3356:5000 14630:4 14630:5000
+      Last update: Sun Aug 10 04:01:16 2025
+  14630 3356 60885
+    208.115.137.100 from 208.115.137.100 (199.230.0.153)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 3356:2 3356:22 3356:100 3356:123 3356:500 3356:903 3356:2064 3356:5000 14630:4 14630:5000
+      Last update: Sun Aug 10 04:01:23 2025
+  16552 1299 3356 60885
+    208.115.137.69 from 208.115.137.69 (46.31.238.17)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 1299:25000 16552:9100 16552:10500 16552:20840 16552:40014
+      Last update: Wed Oct  8 07:03:58 2025
+  53828 2914 174 60885
+    208.115.136.220 from 208.115.136.220 (207.200.192.81)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 2914:420 2914:1003 2914:2000 2914:3000 53828:10 53828:1001
+      Last update: Wed Oct 15 08:56:16 2025
+  8220 1299 3356 60885
+    208.115.137.35 from 208.115.137.35 (212.74.90.12)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Community: 1299:25000 8220:1299 8220:64006 8220:65001 8220:65250 8220:65400
+      Last update: Thu Oct  9 17:02:34 2025
+  20253 1299 3356 60885
+    208.115.137.216 from 208.115.137.216 (217.20.50.48)
+      Origin IGP, valid, external, rpki validation-state: not found
+      Last update: Wed Sep 10 16:24:44 2025
+  32590 1299 3356 60885
+    208.115.136.103 from 208.115.136.103 (162.254.193.250)
+      Origin EGP, valid, external, rpki validation-state: not found
+      Community: 1299:25000 17152:1
+      Last update: Fri Oct 17 19:44:07 2025

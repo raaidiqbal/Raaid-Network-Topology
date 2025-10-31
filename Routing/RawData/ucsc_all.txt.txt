@@ -1,0 +1,75 @@
+BGP routing table entry for 23.185.0.0/24, version 725096747
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  199524 54113
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, otc 54113, best (AS Path), rpki validation-state: valid
+      Last update: Sun Aug 10 04:00:34 2025
+  16552 54113
+    208.115.137.69 from 208.115.137.69 (46.31.238.17)
+      Origin IGP, valid, external, otc 54113, rpki validation-state: valid
+      Community: 16552:9200 16552:10500 16552:20840 16552:40014
+      Last update: Sun Aug 10 03:57:58 2025
+  19653 54113
+    208.115.136.133 from 208.115.136.133 (67.219.192.18)
+      Origin IGP, valid, external, otc 54113, rpki validation-state: valid
+      Last update: Sun Aug 10 03:58:51 2025
+  293 54113
+    208.115.136.58 from 208.115.136.58 (134.55.200.167)
+      Origin IGP, metric 1, valid, external, otc 54113, rpki validation-state: valid
+      Last update: Thu Aug 14 03:38:54 2025
+  852 54113
+    208.115.136.62 from 208.115.136.67 (154.11.0.140)
+      Origin IGP, metric 0, valid, external, otc 54113, rpki validation-state: valid
+      Last update: Thu Oct  2 09:27:00 2025
+  53828 54113
+    208.115.136.62 from 208.115.136.220 (207.200.192.81)
+      Origin IGP, valid, external, otc 54113, rpki validation-state: valid
+      Community: 53828:11 53828:1001
+      Last update: Sun Aug 10 03:59:18 2025
+  8220 54113
+    208.115.137.35 from 208.115.137.35 (212.74.90.12)
+      Origin IGP, valid, external, otc 54113, rpki validation-state: valid
+      Community: 8220:65001 8220:65250 8220:65401
+      Last update: Thu Oct  9 17:02:02 2025
+  20253 54113
+    208.115.137.216 from 208.115.137.216 (217.20.50.48)
+      Origin IGP, valid, external, otc 54113, rpki validation-state: valid
+      Last update: Wed Sep 10 16:25:01 2025
+  32709 14016 54113
+    208.115.136.134 from 208.115.136.134 (63.134.128.248)
+19151 2914 54113
+    208.115.136.18 from 208.115.136.18 (66.216.0.41)
+      Origin IGP, metric 0, valid, external, rpki validation-state: valid
+      Last update: Sun Oct  5 08:35:41 2025
+  17350 1299 54113
+    208.115.136.95 from 208.115.136.95 (141.160.0.65)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 1299:5000 17350:5000 17350:5124
+      Last update: Fri Aug 22 08:40:36 2025
+  17350 1299 54113
+    208.115.136.5 from 208.115.136.5 (141.160.0.66)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 1299:5000 17350:5000 17350:5124
+      Last update: Wed Oct 22 00:01:54 2025
+  49544 9002 54113
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 8910, valid, external, rpki validation-state: valid
+      Community: 49544:24000 49544:24044
+      Last update: Thu Oct 23 02:15:55 2025
+  14630 1299 54113
+    208.115.137.200 from 208.115.137.200 (199.230.0.152)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 1299:5000 1299:35000 14630:4 14630:5000
+      Last update: Fri Aug 22 08:40:36 2025
+  14630 3356 54113
+    208.115.137.100 from 208.115.137.100 (199.230.0.153)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 3356:3 3356:22 3356:100 3356:123 3356:575 3356:901 3356:2042 3356:5000 14630:4 14630:5000 65000:4637 65000:7473 65000:55430 65000:64980 650
+00:64987 65001:3786 65002:7018
+      Last update: Sun Aug 10 03:57:57 2025
+  32590 7922 54113
+    208.115.136.103 from 208.115.136.103 (162.254.193.250)
+      Origin EGP, valid, external, rpki validation-state: valid
+      Community: 7922:404 7922:2900 17152:1 32590:999
+      Last update: Fri Oct 17 19:37:09 2025

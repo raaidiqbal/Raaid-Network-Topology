@@ -1,0 +1,10 @@
+BGP routing table entry for 137.22.0.0/19, version 1081333021
+Paths: (18 available, best #1, table default)
+  Not advertised to any peer
+  6939 26557 26557 26557
+    208.115.136.37 from 208.115.137.251 (208.115.137.251)
+      Origin IGP, metric 90, valid, external, multipath, best (AS Path), rpki validation-state: not found
+      Community: 24115:6939 24115:24115 24115:65023
+      Large Community: 24115:1000:2 24115:1001:1 24115:1002:1 24115:1003:0 24115:1004:6939
+      Last update: Mon Oct 20 05:01:07 2025
+

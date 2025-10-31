@@ -1,0 +1,86 @@
+BGP routing table entry for 203.135.62.0/24, version 1141620925
+Paths: (18 available, best #1, table default)
+  Not advertised to any peer
+  6939 17557
+    208.115.136.37 from 208.115.137.251 (208.115.137.251)
+      Origin IGP, metric 2155, valid, external, multipath, best (AS Path), rpki validation-state: valid
+      Community: 24115:6939 24115:24115 24115:65012
+      Large Community: 24115:1000:1 24115:1001:1 24115:1002:1 24115:1003:0 24115:1004:6939
+      Last update: Sat Oct 25 18:27:42 2025
+  49544 17557
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 2220, valid, external, rpki validation-state: valid
+      Community: 17557:8902 49544:14000 49544:14134
+      Large Community: 63034:1911:82 63034:1912:0 63034:1913:276 63034:1914:150
+      Last update: Tue Oct 21 00:15:18 2025
+  6939 17557
+    208.115.136.37 from 208.115.137.252 (208.115.137.252)
+      Origin IGP, metric 2155, valid, external, multipath, rpki validation-state: valid
+      Community: 24115:6939 24115:24115 24115:65012
+      Large Community: 24115:1000:1 24115:1001:1 24115:1002:2 24115:1003:1 24115:1004:6939
+      Last update: Mon Oct 27 04:06:55 2025
+  16552 6939 17557
+    208.115.137.69 from 208.115.137.69 (46.31.238.17)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 16552:9150 16552:10500 16552:20840 16552:40014
+      Last update: Tue Sep 16 15:40:27 2025
+  32709 6939 17557
+    208.115.136.134 from 208.115.136.134 (63.134.128.248)
+      Origin IGP, valid, external, rpki validation-state: valid
+Last update: Tue Sep 16 15:38:26 2025
+  19151 6939 17557
+    208.115.136.18 from 208.115.136.18 (66.216.0.41)
+      Origin IGP, metric 0, valid, external, rpki validation-state: valid
+      Last update: Thu Sep 18 05:44:07 2025
+  19653 6939 17557
+    208.115.136.37 from 208.115.136.133 (67.219.192.18)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Last update: Tue Sep 16 15:40:29 2025
+  293 6939 17557
+    208.115.136.58 from 208.115.136.58 (134.55.200.167)
+      Origin IGP, metric 1, valid, external, rpki validation-state: valid
+      Last update: Tue Sep 16 15:40:45 2025
+  17350 6939 17557
+    208.115.136.37 from 208.115.136.95 (141.160.0.65)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 17350:5001 17350:5124
+      Last update: Sun Sep 21 21:48:57 2025
+  17350 6939 17557
+    208.115.136.37 from 208.115.136.5 (141.160.0.66)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 17350:5001 17350:5124
+      Last update: Wed Oct 22 00:02:38 2025
+  852 3491 17557
+    208.115.136.67 from 208.115.136.67 (154.11.0.140)
+      Origin IGP, metric 0, valid, external, rpki validation-state: valid
+      Last update: Tue Oct 21 12:59:27 2025
+  14630 6939 17557
+    208.115.136.37 from 208.115.137.200 (199.230.0.152)
+Origin IGP, valid, external, rpki validation-state: valid
+      Community: 6939:5001 14630:4 14630:5001
+      Last update: Tue Sep 16 15:40:27 2025
+  53828 6939 17557
+    208.115.136.37 from 208.115.136.220 (207.200.192.81)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 53828:11 53828:1001
+      Last update: Tue Sep 16 15:40:52 2025
+  8220 6939 17557
+    208.115.137.35 from 208.115.137.35 (212.74.90.12)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Community: 8220:65001 8220:65250 8220:65401
+      Last update: Mon Oct 27 09:32:30 2025
+  20253 6939 17557
+    208.115.136.37 from 208.115.137.216 (217.20.50.48)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Last update: Sat Oct 25 18:27:42 2025
+  199524 137409 8529 17557
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, rpki validation-state: valid
+      Last update: Tue Oct 14 17:16:17 2025
+  32590 137409 8529 17557
+    208.115.136.104 from 208.115.136.103 (162.254.193.250)
+      Origin EGP, valid, external, rpki validation-state: valid
+Community: 8529:20 8529:700 8529:807 8529:977 8529:17557 17152:0 17557:8902 32590:999
+      Extended Community: RT:7578:10 RT:7578:55 RT:7578:99 RT:7578:1699 SoO:7578:1600 Color:168529
+      Large Community: 7578:1600:1 137409:0:3 137409:0:4 137409:0:5 137409:99:98
+      Last update: Tue Oct 28 10:10:04 2025

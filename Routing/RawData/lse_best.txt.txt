@@ -1,0 +1,8 @@
+route-views.chicago.routeviews.org> show ip bgp 185.18.139.150 bestpath
+BGP routing table entry for 185.18.139.0/24, version 366690038
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  199524 174 60885
+    208.115.136.42 from 208.115.136.42 (10.255.18.65)
+      Origin IGP, valid, external, best (AS Path), rpki validation-state: not found
+      Last update: Thu Aug 14 20:54:54 2025

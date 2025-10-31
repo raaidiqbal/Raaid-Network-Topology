@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Routing Analysis</title>
+</head>
+
+<div class="author">
+  <p>
+    <strong>By:</strong> <a href="https://raaidiqbal.github.io" target="_blank">Raaid Iqbal</a> |
+    <strong>Carleton College</strong>|
+    <a href="mailto:iqbalr@carleton.edu">iqbalm@carleton.edu</a> |
+    <a href="https://www.github.com/raaidiqbal" target="_blank">GitHub</a>
+  </p>
+</div>
+
+    <div class="container">
+      <h1 class="title">How Your Meme Finds Its Way Across the Internet
+        <br>
+        <span class="subtitle"></span>
+      </h1>
+<p>
+Whenever you send a message on the internet, such as your favorite meme to a friend, there are hundreds of thousands of options for networks that the information might go through to end up at its final location. However, there is no single map that has a fixed route for how your meme ends up there. Instead, a protocol known as <strong><a href="https://www.cloudflare.com/learning/security/glossary/what-is-bgp/">BGP (Border Gateway Protocol)</a></strong> decides the best route for your message at that particular moment.
+</p>
+
+<p>
+  For this project, I sought to analyze how data makes its way accross the internet using BGP routing data and how the internet is a massive collection of a “networks of networks.”
+</p>
+
+<figure>
+  <img src="network.png" alt="Map showing six global destination locations from Carleton College">
+  <figcaption>
+    Figure 1. Six analyzed destinations from Carleton College. Adapted from 
+    <a href="https://blog.cloudflare.com/bgp-internet-router-protocol/" target="_blank">
+      Cloudflare Blog: "How BGP Keeps the Internet Running"
+    </a>.
+  </figcaption>
+</figure>
+
+
+
+
+
+<h2>The Internet’s Secret Architecture: A Network of Networks</h2>
+
+<p>
+Despite what most people think, the internet is not a single network, but it exists as an interconnection of different networks, managed by different organizations around the world: these can be <strong><a href="https://en.wikipedia.org/wiki/Internet_service_provider">ISPs</a></strong>, universities, and corporations. Each of these manages their internal routing policies for their network infrastructure, forming what is known as an <strong><a href="https://www.cloudflare.com/learning/network-layer/what-is-an-autonomous-system/">Autonomous System (AS)</a></strong>. So let’s talk about this in the context of your meme from before; when you send it to your friend, the data travels through a series of ASes each identified by an <strong><a href="https://www.arin.net/resources/guide/asn/">Autonomous System Number (ASN)</a></strong> to get to its final destination. Through mapping the different ASes my data travelled through from my college to 6 end locations, I formed a network-level understanding of how the internet is an interconnection of many networks.
+</p>
+
+<p>
+Speaking of network level, this is what my analysis focuses on since this is the layer <strong><a href="https://en.wikipedia.org/wiki/Internet_service_provider">ISPs</a></strong>, universities, and corporations. Each of these manages their internal routing policies for their network infrastructure, forming what is known as an <strong><a href="https://www.cloudflare.com/learning/network-layer/what-is-an-autonomous-system/">Autonomous System (AS)</a></strong>. So let’s talk about this in the context of your meme from before; when you send it to your friend, the data travels through a series of ASes each identified by an <strong><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/"">Internet Protocol (IP)</a></strong> functions on, providing best effort delivery and addressing. Routers are integral for forwarding information to their neighbours to make sure data reaches the correct destination efficiency (the specific routing is determined by protocols).
+</p>
+
+<p>
+Now, you might be thinking, with billions of people in the world, the issue of scalability becomes a huge consideration, but this is where hierarchy of design allows the modern internet to function! <strong><a href="https://book.systemsapproach.org/scaling/global.html">Computer Networks: A Systems Approach</a></strong> discusses how hierarchy operates within a network, and also across different networks through coordination by BGP, which allows networks to advertise what IPs they can reach through a specific AS path.
+</p>
+
+<blockquote>
+  BGP doesn't just move packets, it reflects the <em>business politics of the Internet</em>. 
+  Networks exchange traffic based on <strong>policy-based routing</strong>, where economic agreements, traffic volume, 
+  and mutual benefit determine how data flows. This means the Internet's structure isn't purely technical,
+  it's shaped by who peers with whom, and under what terms. 
+  For a deeper look at how these relationships shape routing, see 
+  <a href="https://blog.apnic.net/2020/09/21/the-economics-of-bgp-peering/" target="_blank">APNIC’s post on peering economics</a>.
+</blockquote>
+
+<p>
+So long story short, your data travels through different ASes to get to its destination and BGP allows these systems to exchange information.
+</p>
+
+<h2>Peeking into BGP: How I Mapped Internet Routes from Carleton</h2>
+
+<p>
+So to understand how the internet functions as a “network of networks”, I used <strong><a href="https://en.wikipedia.org/wiki/Telnet" target="_blank">Telnet</a></strong> to connect to the <strong><a href="http://www.routeviews.org/" target="_blank">BGP route collector in Chicago</a></strong> (this basically allowed me to see what the best path to my destinations was). I collected the preferred path to Carleton, and also the preferred and all available paths to the six locations listed below:
+</p>
+
+<ul>
+  <li>Lahore University of Management Sciences, Lahore, Pakistan</li>
+  <li>London School of Economics, London, England</li>
+  <li>University of Queensland, Brisbane, Queensland, Australia</li>
+  <li>University of California, Santa Cruz, California, United States</li>
+  <li>University of São Paulo, São Paulo, Brazil</li>
+  <li>Microsoft Corporation, United States</li>
+</ul>
+
+<figure>
+  <img src="kepler.gl.png" alt="Map showing six global destination locations from Carleton College">
+  <figcaption>
+
+    Figure 2. Six global destinations analyzed in this project: Pakistan, the UK, the USA, Australia, Brazil, and Microsoft’s global network.
+  </figcaption>
+</figure>
+
+<p>
+P.S: this was the command I used for the best path (remove 'best path' to obtain all routes):
+</p>
+
+<pre><code>show ip bgp 137.22.0.0 bestpath</code></pre>
+
+<p>
+So getting the preferred route to Carleton revealed hops from the ASN 6939 to 26557 (this was the preferred route from Chicago to Carleton, out of a total of 16 available routes the data could have taken). To illustrate how the final route to each of my locations was constructed, the hops above were concatenated to each of the AS preferred routes to the aforementioned locations.
+The aforemetnioned command for LSE provided the message shown in the figure below.
+
+<figure>
+  <img src="route.png" alt="Preferred BGP route to the London School of Economics (LSE)">
+  <figcaption>
+    Figure 3. Preferred route from Carleton to the London School of Economics (LSE).
+  </figcaption>
+</figure>
+
+So the path to LSE, for example, became 26557 6939 199524 174 60885.
+</p>
+
+<figure>
+  <img src="image.png.png" alt="Diagram showing Telnet-based route collection and AS path concatenation process">
+  <figcaption>Figure 4. The concatenated path for LSE.</figcaption>
+</figure>
+
+<p>
+  After doing all of this, the big takeaway? I was able to create a map of how information travels through different networks, ISPs, and backbones to reach end destinations!
+</p>
+
+<h2>The Curious Journeys of Packets: Preferred Paths Around the World</h2>
+
+<p>
+  Okay, now for the numbers. For each of my 6 locations, the number of hops ranged from two (for LUMS in Pakistan), to five for the U of Queensland. Roughly speaking, the average and median was four hops (petty crazy considering how far apart some of these locations are!).
+
+All of my routes out of Carleton started on the Carleton network, and went to Hurricane Electric, a very, very important tier responsible for connecting Carleton to the rest of the world. The traceroutes also went to other backbone networks in Europe before being connected to regional carriers. The table below shows the specific breakdown.
+
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Destination</th>
+      <th>Key ASes Beyond Hurricane Electric</th>
+      <th>Geographic Highlights</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LUMS (Pakistan)</td>
+      <td>Pakistan Telecommunication Company Limited (AS17557)</td>
+      <td>Islamabad, Pakistan</td>
+    </tr>
+    <tr>
+      <td>LSE (UK)</td>
+      <td>GCORE (AS199524, Amsterdam), Cogent (AS174, Washington DC), Zengenti (AS60885, UK)</td>
+      <td>Routing in Europe</td>
+    </tr>
+    <tr>
+      <td>Microsoft (USA)</td>
+      <td>Digicert (AS16552, Herndon, VA), Telia (AS1299, Amsterdam), Akamai (AS16625, Cambridge, MA)</td>
+      <td>Weird European route and CDN</td>
+    </tr>
+    <tr>
+      <td>UCSC (USA)</td>
+      <td>i3D.net (AS49544, Amsterdam), Fastly (AS54113, San Francisco)</td>
+      <td>Another weird European route and CDN</td>
+    </tr>
+    <tr>
+      <td>University of Queensland (Australia)</td>
+      <td>Gcore (AS199524, Amsterdam), APNIC (AS24436, Brisbane)</td>
+      <td>Trans-Pacific route</td>
+    </tr>
+    <tr>
+      <td>University of São Paulo (Brazil)</td>
+      <td>i3D.net (AS49544, Amsterdam), Telefónica Global Solutions (AS12956), Telefónica Brasil (AS10429), Universidade de São Paulo (AS28571)</td>
+      <td>European-to-Latin American handoff</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    Large corporations like Microsoft rely on <strong><a href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/" target="_blank">Content Delivery Networks (CDNs)</a></strong> 
+    for content delivery to users as closely as possible to allow efficiency. 
+    Though funny enough, the advertised route went through Europe before coming back to the US. 
+    This was also the case for <strong>UCSC</strong> where the route terminated in California at another CDN 
+    that is likely providing the content from UCSC.
+  </li>
+
+  <li>
+    Even though <strong>UCSC is regional</strong>, <strong>BGP</strong> advertised the most optimal route obeying policies and 
+    using the information provided by neighbours at each <strong>ASN</strong> routed through <strong>Amsterdam</strong>. 
+    Interestingly enough, this was also the reason why distant locations from Carleton such as 
+    <strong>LUMS in Pakistan</strong> (about 7,000 miles) took only 2 hops, just like the route for UCSC, which is regional.
+  </li>
+
+  <li>
+    Across all destinations, the <strong>average AS path length was 3.7 hops</strong>, 
+    with <strong>European nodes</strong> (like <strong>GCORE</strong> and <strong>Cogent</strong>) 
+    appearing most frequently as intermediate networks.
+  </li>
+</ul>
+
+<blockquote>
+<p>
+I believe several additional reasons supplement this seemingly bizarre routing (even though it is completely normal to expect from BGP!). It is likely that the path to LUMS is spending a lot of time on the HE backbone, so the total time to get to the destination is higher than UCSC even though both go through the same number of ASs. Moreover, since contaminating the routes from Chicago to Carleton to the 6 locations provides only an estimate, the actual preferred path might look drastically different.
+</p>
+</blockquote>
+
+<h2>So Many Ways Home: Measuring All the Advertised Routes</h2>
+
+<p>
+  Remember how I mentioned that in addition to a preferred route, there were also other advertised routes the data could have taken? Well, below are the numbers I crunched for each of my locations.
+  
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Destination</th>
+      <th># of Advertised Paths</th>
+      <th>Shortest Path Length</th>
+      <th>Longest Path Length</th>
+      <th>Avg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carleton</td>
+      <td>Lahore University of Management Sciences, Lahore, Pakistan</td>
+      <td>18</td>
+      <td>2</td>
+      <td>4</td>
+      <td>2.94</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>London School of Economics, London, England</td>
+      <td>16</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3.19</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of Queensland, Brisbane, Queensland, Australia</td>
+      <td>16</td>
+      <td>3</td>
+      <td>5</td>
+      <td>3.88</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of California, Santa Cruz, California, United States</td>
+      <td>16</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of São Paulo, São Paulo, Brazil</td>
+      <td>16</td>
+      <td>4</td>
+      <td>5</td>
+      <td>4.78</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>Microsoft Corporation, United States</td>
+      <td>16</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+The total number of routes ranged from mostly 16, to one that had 18, indicating that <strong><a href="https://www.he.net/about_us.html" target="_blank">Hurricane Electric (AS6939)</a></strong>, again being a major 
+  <strong><a href="https://en.wikipedia.org/wiki/Internet_backbone" target="_blank">Tier 1 backbone</a></strong>, is widely connected to different ASs (Network of networks again!), and maintains numerous different ways to reach a destination. So even if there is a network outage somewhere, your meme from before can still reach your friend.
+</p>
+
+<figure>
+  <img src="bar.png" alt="Bar chart showing average AS path lengths for six destinations">
+  <figcaption>
+    Figure 5. Number of advertised route lengths and shortest route length.
+  </figcaption>
+</figure>
+
+<p><strong>Here's what the numbers tell us:</strong></p>
+
+<ul>
+  <li>The shortest path was on average 2.5 hops, and the longest was 4.78.</li>
+  <li>Moreover, the shortest routes were the two regional destinations (Microsoft and UCSC), which reveals that these routes are short and stable.</li>
+  <li>The intercontinental locations also had the most variety in terms of the difference between the shortest route, and average route length (2 versus 4 for LUMS, for example).</li>
+  <li>Hurricane Electric appeared in an advertised route for each destination! This confirms its status as a tier 1 backbone. Level3 also appeared as a stopping point for 2-3 locations.</li>
+</ul>
+
+<p><strong>The Most Popular ISPs:</strong></p>
+
+<ul>
+  <li>HE (Tier 1): As previously mentioned, it's everywhere.</li>
+  <li>Lumen and Aerlion (Tier 3)</li>
+  <li>PTCL for Pakistan, AARNet for Australia, Telefonica for Brazil appeared only in routes to those locations, demonstrating their function in data transit locally.</li>
+</ul>
+
+<p>
+  You can explore all major ISPs and backbone providers that appeared in my data using this <strong><a href="https://www.google.com/maps/d/u/0/edit?mid=1lkUJW8OjQ7mJg-DlYfhlF0noY-LUQDU&usp=sharingK" target="_blank">interactive global map</a></strong>.
+</p>
+
+<p>
+These results further showed how large backbone ISPs such as Hurricane Electric provide intercontinental connection, and handoff service to regional carriers when going to end locations.
+</p>
+
+<h2>BGP vs. Traceroute: Policy, Performance, and the Paths in Between</h2>
+
+<p>
+Just to reiterate, BGP is a protocol that routes information through various ASs according to policy and information from neighbours. It’s important to consider that traceroutes can also be used to trace how data moves to its end destination, but they reflect real time performance. Conveniently, having conducted a similar analysis for traceroutes through my <strong><a href="https://docs.google.com/presentation/d/1EeHUBkya_UqTZsQgnbB4unmpIs-6BbRP6JuBiCF2LFM/edit?usp=sharing" target="_blank">Network Topology Project</a></strong>, this project revealed that there was a large amount of overlap in the networks involved, and the table below comapres the traceroutes to the preferred paths!
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>AS Path</th>
+      <th>Traceroute Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carleton</td>
+      <td>Lahore University of Management Sciences, Lahore, Pakistan</td>
+      <td>26557 26557 26557 6939 6939 17557</td>
+      <td>57 6939 17557</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>London School of Economics, London, England</td>
+      <td>26557 26557 26557 6939 199524 174 60885</td>
+      <td>6939 3356 60885</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of Queensland, Brisbane, Queensland, Australia</td>
+      <td>26557 26557 26557 6939 49544 7575 24436</td>
+      <td>57 11537 101 7575 24436</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of California, Santa Cruz, California, United States</td>
+      <td>26557 26557 26557 6939 199524 54113</td>
+      <td>57 54113</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>University of São Paulo, São Paulo, Brazil</td>
+      <td>26557 26557 26557 6939 49544 12956 10429 28571, (aggregated by 65001 143.107.249.38)</td>
+      <td>6939 12956 28571</td>
+    </tr>
+    <tr>
+      <td>Carleton</td>
+      <td>Microsoft Corporation, United States</td>
+      <td>26557 26557 26557 6939 16552 1299 20940 16625</td>
+      <td>57 16625</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>The Internet’s Invisible Highways: What My Routes Revealed</h2>
+
+<p>
+The good news is that the vast amount of similarity in ASs traversed shows the robustness and stability of paths to each of the different locations! This means that the optimal route is in fact chosen when you send data.
+</p>
+
+<h3>What We Don’t See: Inside the Hidden Hops of the Internet</h3>
+<p>
+While the invisibility of some private networks in the traceroutes come from ICMP packets being rejected by networks, BGP routes reveal only AS numbers of traversed networks; this means you don’t actually get to see how many hops take place within each AS. This means my original Traceroute map remains accurate because of the specificity of the hops it includes.
+</p>
+
+<h3>Politics of Packets: When Business Rules Trump Speed</h3>
+<p>
+Moreover, the differences in AS traversed reveals the nature of BGP built on following policy and commercial agreements, revealing the ASes that decided where the packets should go, versus the traceroutes highlighting what path they actually took. This means that my original traceroute map could have some variation if the data went through a different AS that was deemed more optimal at a specific time (so some different ISPs could appear on my map)
+</p>
+
+<p>
+Together, BGPs paint a macro picture of connection of networks, while Traceroutes show the specific micro hops taken to reach the destination.
+</p>
+
+<h3>Why Your Meme Matters: Reflections on Internet Connectivity</h3>
+<p>
+Through this project, I was able to trace how data moves from Carleton to the rest of the world, both regionally, and across continents. The results showed the big picture idea of the internet being a <strong>network of other networks</strong>, as my packets went from one AS to another.
+</p>
+
+<p>
+The BGP data from the Route Views Chicago Collector revealed the most important backbone ISPs such as <strong>Hurricane Electric</strong>, which handoff data to local providers such as PTCL (in Pakistan). This reinforces the idea of hierarchy as these networks exchange information with each other to create optimal routes.
+</p>
+
+<p>
+As for why this matters, the data for both the preferred paths and all advertised paths shows how <strong>tier 1 providers</strong> are essential for carrying data, and how alternate routes exist for data transit. BGP comes in clutch by nailing down the best one at any particular time!
+</p>
+
+<p>
+So all in all, the next time you send your meme across the web, you can appreciate the inner workings behind data transit that takes place, and how it only takes seconds to do so!
+</p>
+
+<footer class="footnotes">
+  <h3>Footnotes</h3>
+  <ol>
+    <li><a href="https://www.cloudflare.com/learning/security/glossary/what-is-bgp/" target="_blank">Cloudflare Blog: "How BGP Keeps the Internet Running"</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Internet_service_provider" target="_blank">Wikipedia: Internet Service Provider (ISP)</a></li>
+    <li><a href="https://www.cloudflare.com/learning/network-layer/what-is-an-autonomous-system/" target="_blank">Cloudflare: What is an Autonomous System?</a></li>
+    <li><a href="https://www.arin.net/resources/guide/asn/" target="_blank">ARIN: Autonomous System Numbers</a></li>
+    <li><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank">Cloudflare: Internet Protocol (IP)</a></li>
+    <li><a href="https://book.systemsapproach.org/scaling/global.html" target="_blank">Computer Networks: A Systems Approach</a></li>
+    <li><a href="https://blog.apnic.net/2020/09/21/the-economics-of-bgp-peering/" target="_blank">APNIC Blog: The Economics of BGP Peering</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Telnet" target="_blank">Wikipedia: Telnet</a></li>
+    <li><a href="http://www.routeviews.org/" target="_blank">University of Oregon Route Views Project</a></li>
+    <li><a href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/" target="_blank">Cloudflare: What is a CDN?</a></li>
+    <li><a href="https://www.he.net/about_us.html" target="_blank">Hurricane Electric (AS6939)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Internet_backbone" target="_blank">Wikipedia: Internet Backbone</a></li>
+    <li><a href="https://docs.google.com/presentation/d/1EeHUBkya_UqTZsQgnbB4unmpIs-6BbRP6JuBiCF2LFM/edit?usp=sharing" target="_blank">Network Topology Project Presentation</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Traceroute" target="_blank">Wikipedia: Traceroute</a></li>
+    <li><a href="https://www.google.com/maps/d/u/0/edit?mid=1lkUJW8OjQ7mJg-DlYfhlF0noY-LUQDU&usp=sharing" target="_blank">Interactive ISP Map (Google My Maps)</a></li>
+    <li><a href="https://kepler.gl/" target="_blank">Kepler.gl: Geospatial Data Visualization</a></li>
+    <li><a href="https://www.diagrams.net/" target="_blank">Diagrams.net: Network and System Diagramming Tool</a></li>
+  </ol>
+</footer>

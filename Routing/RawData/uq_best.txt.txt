@@ -1,0 +1,9 @@
+BGP routing table entry for 130.102.0.0/16, version 1059234203
+Paths: (16 available, best #1, table default)
+  Not advertised to any peer
+  49544 7575 24436
+    208.115.137.50 from 208.115.137.50 (188.122.95.107)
+      Origin IGP, metric 4410, valid, external, best (AS Path), rpki validation-state: not found
+      Community: 7575:1000 7575:2402 7575:3004 49544:14000 49544:14153 65040:0 65060:9 65302:20965
+      Large Community: 64219:1002:3696 64219:1900:0 64219:1903:9
+      Last update: Fri Oct 24 07:13:41 2025
