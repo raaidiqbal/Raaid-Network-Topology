@@ -6,6 +6,7 @@ CS 331, Fall 2025
 
 This project analyzes how DNS works by examining real DNS traffic in Wireshark, using command-line tools like dig, and writing Python code to query hundreds of domains. The results compare Carleton's DNS resolver with Google's resolver, focusing on response behavior, IP differences, and TTL patterns.
 
+```
 └─ DNS
 ├── README.md
 │
