@@ -50,13 +50,3 @@ This project analyzes how DNS works by examining real DNS traffic in Wireshark, 
 
 
 
-
-
-**Collaborators:**
-
-* Amy Csizmar Dalal
-
-
-
-
-
