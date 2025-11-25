@@ -10,7 +10,8 @@ The revision improves clarity and analysis by:
 * Reorganizing tables by region/RTT and highlighting outliers.
 * Replacing the earlier confusing comparison graph with direct RTT comparisons.
 * Adding clearer analysis of routing patterns (e.g., when traffic exits via Hurricane Electric vs. NL) and why some regions show much weaker connectivity.
-* These updates make the project’s conclusions about global Internet performance and “network of networks” behavior more precise and easier to interpret.
+
+These updates make the project’s conclusions about global Internet performance and “network of networks” behavior more precise and easier to interpret.
 
 ## Directory contents
 
