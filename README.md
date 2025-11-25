@@ -2,6 +2,9 @@ This is the README file for Raaid's CS 331, Fall 2025, project repository
 
 ## Contents of this repository
 
+### Final Project Portfolio
+This reflection ynthesizes lessons across all projects and addresses the central question "How does the structure and implementation of computer networks impact how we interact with the world?"
+
 ### 1. Gopher
 Implementation of the Gopher protocol (RFC 1436), including both a Python client and server built using raw sockets. The project required interpreting the protocol specification directly, handling directory menus (type 1) and file retrieval (type 0), managing selector strings, and designing a robust message parser without external Gopher libraries.
 
@@ -25,7 +28,7 @@ This project analyzes how DNS works by examining real DNS traffic in Wireshark, 
 ├── Final Reflection.pdf
 │
 ├── Gopher/
-│   └── https://github.com/raaidiqbal/cs331-gopher-Raaid.git
+│   └── [Gopher Repository](https://github.com/raaidiqbal/cs331-gopher-Raaid)
 │
 ├── NetworkTopology/
 │   ├── README.md
