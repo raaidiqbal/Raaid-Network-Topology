@@ -26,6 +26,7 @@ NetworkTopology/
 │   
 │
 └── Slides/
+...
     
 The purpose of this project was to test 6 different endpoints to obtain a picture of how Carleton College is connected to the wider internet. The comparison was done using traceroutes, pings, and RIPE.
 
