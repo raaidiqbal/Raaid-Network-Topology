@@ -14,8 +14,8 @@ The revision improves clarity and analysis by:
 These updates make the project’s conclusions about global Internet performance and “network of networks” behavior more precise and easier to interpret.
 
 ## Directory contents
-
 ...
+
 NetworkTopology/
 │   README.md
 │
