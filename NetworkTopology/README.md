@@ -15,6 +15,18 @@ These updates make the project’s conclusions about global Internet performance
 
 ## Directory contents
 
+...
+NetworkTopology/
+│   README.md
+│
+├── Artifacts/
+│   
+│
+├── RawData/
+│   
+│
+└── Slides/
+    
 The purpose of this project was to test 6 different endpoints to obtain a picture of how Carleton College is connected to the wider internet. The comparison was done using traceroutes, pings, and RIPE.
 
 Endpoints tested:
