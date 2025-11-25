@@ -14,6 +14,8 @@ ReliableTransport/
 │
 └── Artifacts/
 
+...
+
 This project explores how TCP (Transmission Control Protocol) provides reliable, ordered, and congestion-aware data transfer on top of the Internet s best-effort IP service. Using Wireshark, I captured and analyzed a real TCP connection (from a YouTube session) to illustrate each of TCP s core services: 
 - Connection setup (three-way handshake)
 - Reliable transmission and recovery Flow control and sliding window
